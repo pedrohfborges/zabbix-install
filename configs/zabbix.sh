@@ -17,9 +17,9 @@ sudo mysql -u root -e "set global log_bin_trust_function_creators = 1;"
 zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql --default-character-set=utf8mb4 -uzabbix -pmysql -uzabbix -ppassword zabbix
 sudo mysql -u root -e "set global log_bin_trust_function_creators = 0;"
 sudo su -
-cat cat /configs/zabbix_server.config > /etc/zabbix/zabbix_server.conf
-systemctl restart zabbix-server zabbix-agent apache2
-systemctl enable zabbix-server zabbix-agent apache2
+sudo cat cat /configs/zabbix_server.config > /etc/zabbix/zabbix_server.conf
+sudo systemctl restart zabbix-server zabbix-agent apache2
+sudo systemctl enable zabbix-server zabbix-agent apache2
 
 
 
